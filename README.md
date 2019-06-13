@@ -12,6 +12,7 @@ This is done in the following steps:
 - It is then uploaded on [Cloudinary](https://cloudinary.com/), a media cloud service. 
 
 - Once it is uploaded we can retrieve it's url, that we send to the [Microsoft Azure's face recognition software](https://azure.microsoft.com/fr-fr/services/cognitive-services/directory/vision/)
+Here we choose only to use the gender and age data, but Azure AI can return much more ( is the person smiling, hair color, is the subject wearing glasses, color of the eyes, emotion ...)
 
 - Finally we send the response of the AI to the frontend to display the photo, the age of the subject and their gender.
 
@@ -42,6 +43,5 @@ This is done in the following steps:
 * [Express.js](https://expressjs.com/fr/) - a web application infrastructure for Node.js
 * [React Native](https://facebook.github.io/react-native/) - via Expo.io
 * [React Redux](https://github.com/reduxjs/react-redux) - Redux is a predictable state container for JavaScript apps.
-* [React-native-maps](https://github.com/react-native-community/react-native-maps) - A module that enable mapview for Android or iOS
-* [Socket.io](https://socket.io/) - A JS framework that enables real-time, bidirectional and event-based communication.
-* [Facebook Authentication](https://developers.facebook.com/) - To implement login via user's facebook
+* [Cloudinary](https://cloudinary.com/) - A media cloud service
+* [Microsoft Azure](https://azure.microsoft.com/fr-fr/) - Microsoft's very diverse AI service
