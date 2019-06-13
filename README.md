@@ -19,17 +19,22 @@ This is done in the following steps:
 * Home screen:
 
 
-![locapic1](https://i.ibb.co/ZSGm48X/locapic-home.jpg)  ![locapic3](https://i.ibb.co/mNTXWqS/locapic-chat-jpg.jpg) ![locapic2](https://i.ibb.co/jfPnRLr/locapic-maps.jpg)
+![faceup1](https://i.ibb.co/CM9xHFZ/faceup-home.jpg)
 
-* Maps screen:
-
-
+* Camera screen:
 
 
-* Chat screen:
+![faceup2](https://i.ibb.co/GMjh18f/faceup-camera.jpg)
+
+* Library screen:
 
 
+![faceup3](https://i.ibb.co/FVPtf3V/faceup-library.jpg)
 
+* Modal:
+
+
+![faceup4](https://i.ibb.co/VvQsRnt/faceup-modal.jpg)
 
 ## Developed With
 
