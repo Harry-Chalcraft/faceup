@@ -12,7 +12,7 @@ This is done in the following steps:
 - It is then uploaded on [Cloudinary](https://cloudinary.com/), a media cloud service. 
 
 - Once it is uploaded we can retrieve it's url, that we send to the [Microsoft Azure's face recognition software](https://azure.microsoft.com/fr-fr/services/cognitive-services/directory/vision/)
-Here we choose only to use the gender and age data, but Azure AI can return much more ( is the person smiling, hair color, is the subject wearing glasses, color of the eyes, emotion ...)
+Here we choose only to use the gender and age data, but the Azure AI can return much more ( is the subject smiling, hair color, is the subject wearing glasses, color of the eyes, emotion ...)
 
 - Finally we send the response of the AI to the frontend to display the photo, the age of the subject and their gender.
 
