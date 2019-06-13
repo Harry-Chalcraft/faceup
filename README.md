@@ -24,7 +24,7 @@ This is done in the following steps:
 * Camera screen:
 
 
-![faceup2](https://i.ibb.co/6wthCGg/faceup-camera2.jpg)
+![faceup2](https://i.ibb.co/RcCDnGy/faceup-camera2.jpg)
 
 * Library screen:
 
