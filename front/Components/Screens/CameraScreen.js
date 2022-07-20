@@ -19,20 +19,6 @@ class CameraScreen extends React.Component {
 
 
   onPictureSaved = async photo => {
-    // console.log(photo.uri);
-    //
-    // console.log(photo.width);
-    // console.log(photo.height);
-    //
-    // console.log(photo.exif);
-    //
-    // console.log(photo.base64);
-    // await FileSystem.moveAsync({
-    //   from: photo.uri,
-    //   to: `${FileSystem.documentDirectory}photos/${Date.now()}.jpg`,
-    // });
-    // this.setState({ newPhotos: true });
-    console.log("PHOTO SAVED --> " + photo.uri)
 
     var data = new FormData();
 
@@ -42,17 +28,13 @@ class CameraScreen extends React.Component {
       name: 'nomImage',
     });
 
-    console.log("my IP address: "+ ipAddress)
-
     //pensez a mettre votre IP backend !!
     await fetch(ipAddress+"/upload", {
       method: 'post',
       body: data
     }).then(res => {
-      console.log(res)
       return res.json()
     }).then(picture => {
-      console.log(picture)
       this.props.handlePicture(picture.data.name, picture.data.age, picture.data.gender, picture.data.url)
     }).catch(err => {
       console.log(err)

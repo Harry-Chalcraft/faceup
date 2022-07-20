@@ -21,10 +21,8 @@ class HomeScreen extends React.Component {
   componentDidMount(){
     fetch(ipAddress+"/pictures")
     .then(res => {
-      console.log(res)
       return res.json()
     }).then(picture => {
-      // console.log(picture)
       var picturesFromDB = picture.data.map(pics => {
         return {
           pictureName: pics.name,
@@ -33,7 +31,6 @@ class HomeScreen extends React.Component {
           pictureUrl: pics.url
         }
       })
-      console.log(picturesFromDB)
       this.props.handlePicsFromDB(picturesFromDB)
     }).catch(err => {
       console.log(err)

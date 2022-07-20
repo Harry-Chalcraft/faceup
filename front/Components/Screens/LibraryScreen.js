@@ -18,27 +18,7 @@ class LibraryScreen extends React.Component {
 
  render() {
 
-   // const list = [
-   //   {
-   //     img: 'https://images.unsplash.com/photo-1531251445707-1f000e1e87d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2681&q=80',
-   //     gender: 'Female',
-   //     age: 32,
-   //   },
-   //   {
-   //     img: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
-   //     gender: 'Male',
-   //     age: 39,
-   //   },
-   //   {
-   //     img: 'https://images.unsplash.com/photo-1519362909365-f8591adb630e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
-   //     gender: 'Female',
-   //     age: 24,
-   //   },
-   // ]
-
    var items = this.props.pictures.map((element, i) => {
-     console.log("return de", i)
-     console.log("AFFICHAAAAAAAAGE", this.props.pictures)
      return (
        <ModalPicture
           item={i+1}

@@ -26,7 +26,6 @@ const uriBase = 'https://westcentralus.api.cognitive.microsoft.com/face/v1.0/det
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log(pictureModel)
   res.render('index', { title: 'Express' });
 });
 
@@ -43,7 +42,6 @@ var randomName = Math.floor(Math.random() * 1000000)
 var photoPath = `public/images/faceUp-${randomName}.jpg`;
 var filename = req.files.photo;
 
-console.log(filename)
    filename.mv(photoPath, function(err) {
      if (err){
        return res.status(500).send(err);
@@ -52,9 +50,7 @@ console.log(filename)
      cloudinary.v2.uploader.upload(photoPath,
          function(error, result){
            if(result){
-             console.log(result)
 
-             console.log("je suis ici")
 
              // API AI
              // const imageUrl = result.secure_url;
@@ -85,15 +81,12 @@ console.log(filename)
 
              request.post(options, (error, response, body) => {
                if (error) {
-                 console.log('Error: ', error);
                  return;
                }
 
                let jsonResponse = JSON.parse(body);
-               console.log(jsonResponse);
 
                if (jsonResponse.length > 0) {
-                 console.log("Face detected!")
                  var newPicture = new pictureModel({
                    url: result.secure_url,
                    name: result.original_filename,
@@ -102,11 +95,9 @@ console.log(filename)
                  })
 
                  newPicture.save(function(error, picture){
-                   console.log("PICTURE SAVED IN MLAB --> "+picture)
                    res.json({result: true, data: picture })
                  })
                } else {
-                 console.log("No Face Detected")
                  res.json({result: false, data: "No face detected" })
                }
 
